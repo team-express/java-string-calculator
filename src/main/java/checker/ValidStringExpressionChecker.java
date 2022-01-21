@@ -5,7 +5,7 @@ public class ValidStringExpressionChecker {
 		return c >= '0' && c <= '9';
 	}
 
-	public static boolean isAllNumber(String s) {
+	private static boolean isAllNumber(String s) {
 		int i;
 		int length = s.length();
 
