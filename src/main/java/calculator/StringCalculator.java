@@ -1,7 +1,7 @@
 package calculator;
 
 public class StringCalculator {
-	private int calculateOneWithOperator(int num1, int num2, String operator) {
+	private static int calculateOneWithOperator(int num1, int num2, String operator) {
 
 		if (operator.equals("+"))
 			num1 += num2;
