@@ -1,6 +1,7 @@
 package checker;
 
 public class ValidStringExpressionChecker {
+
 	private static boolean isNumber(char c) {
 		return c >= '0' && c <= '9';
 	}
@@ -13,5 +14,10 @@ public class ValidStringExpressionChecker {
 			;
 
 		return i == length;
+	}
+
+	private static boolean isOneOperator(String s) {
+		char c = s.charAt(0);
+		return s.length() == 1 && (c == '+' || c == '*' || c == '-' || c == '/');
 	}
 }
