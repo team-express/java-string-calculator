@@ -7,10 +7,11 @@ public class ValidStringExpressionChecker {
 
 	public static boolean isAllNumber(String s) {
 		int i;
+		int length = s.length();
 
-		for (i = 0; i < s.length() && isNumber(s.charAt(i)); i++)
+		for (i = 0; i < length && isNumber(s.charAt(i)); i++)
 			;
 
-		return i == s.length();
+		return i == length;
 	}
 }
