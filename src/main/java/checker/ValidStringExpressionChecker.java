@@ -4,6 +4,8 @@ import java.util.Arrays;
 
 public class ValidStringExpressionChecker {
 
+	private static final int FIRST_INDEX = 0;
+
 	private ValidStringExpressionChecker() {
 	}
 
@@ -15,7 +17,7 @@ public class ValidStringExpressionChecker {
 		int i;
 		int length = s.length();
 
-		for (i = 0; i < length && isNumber(s.charAt(i)); i++)
+		for (i = FIRST_INDEX; i < length && isNumber(s.charAt(i)); i++)
 			;
 
 		return i == length;
@@ -26,7 +28,7 @@ public class ValidStringExpressionChecker {
 		if (s.length() != 1)
 			return false;
 
-		char c = s.charAt(0);
+		char c = s.charAt(FIRST_INDEX);
 
 		return c == '+' || c == '*' || c == '-' || c == '/';
 	}
