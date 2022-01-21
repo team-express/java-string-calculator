@@ -17,13 +17,4 @@ public class ValidStringExpressionCheckerTests {
 		assertThat(ValidStringExpressionChecker.isAllNumber(" 3")).isFalse;
 		assertThat(ValidStringExpressionChecker.isAllNumber("33a")).isFalse;
 	}
-
-	@Test
-	@DisplayName("주어진 한 문자가 숫자인가")
-	void testIsNumber(){
-		assertThat(ValidStringExpressionChecker.isNumber('3')).isTrue();
-		assertThat(ValidStringExpressionChecker.isNumber('+')).isFalse();
-		assertThat(ValidStringExpressionChecker.isNumber(' ')).isFalse();
-		assertThat(ValidStringExpressionChecker.isNumber('a')).isFalse();
-	}
 }
