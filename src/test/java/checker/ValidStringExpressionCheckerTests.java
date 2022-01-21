@@ -8,13 +8,4 @@ import static org.assertj.core.api.Assertions.assertThat;
 import java.util.Arrays;
 
 public class ValidStringExpressionCheckerTests {
-
-	@Test
-	@DisplayName("주어진 문자열이 숫자인가")
-	void testIsAllNumber() {
-		assertThat(ValidStringExpressionChecker.isAllNumber("333")).isTrue();
-		assertThat(ValidStringExpressionChecker.isAllNumber("3 ")).isFalse();
-		assertThat(ValidStringExpressionChecker.isAllNumber(" 3")).isFalse();
-		assertThat(ValidStringExpressionChecker.isAllNumber("33a")).isFalse();
-	}
 }
