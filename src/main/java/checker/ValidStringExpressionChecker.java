@@ -4,6 +4,9 @@ import java.util.Arrays;
 
 public class ValidStringExpressionChecker {
 
+	private ValidStringExpressionChecker() {
+	}
+
 	private static boolean isNumber(char c) {
 		return c >= '0' && c <= '9';
 	}
