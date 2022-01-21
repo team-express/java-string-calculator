@@ -42,6 +42,6 @@ public class ValidStringExpressionChecker {
 			splitExpression[operatorIndex]); operatorIndex += 2)
 			;
 
-		return numberIndex == splitExpression.length+1 && operatorIndex == splitExpression.length;
+		return numberIndex == splitExpression.length + 1 && operatorIndex == splitExpression.length;
 	}
 }
