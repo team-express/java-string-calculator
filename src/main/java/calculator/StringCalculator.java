@@ -18,6 +18,7 @@ public class StringCalculator {
 		if (operator.equals("*"))
 			num1 *= num2;
 
+		//차후 0으로 나누는 것 처리할 것
 		if (operator.equals("/"))
 			num1 /= num2;
 
