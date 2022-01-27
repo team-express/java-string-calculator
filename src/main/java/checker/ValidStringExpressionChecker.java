@@ -36,8 +36,8 @@ public class ValidStringExpressionChecker {
 		return c == '+' || c == '*' || c == '-' || c == '/';
 	}
 
-	private static boolean isEvenNumber(int number){
-		return number%2==0;
+	private static boolean isEvenNumber(int number) {
+		return number % 2 == 0;
 	}
 
 	public static boolean check(String expression) {
