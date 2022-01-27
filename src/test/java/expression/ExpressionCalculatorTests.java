@@ -9,10 +9,10 @@ public class ExpressionCalculatorTests {
 	@Test
 	@DisplayName("split으로 인하여 나누어진 String[]타입의 수식을 계산하여 반환한다.")
 	void testCalculate() {
-		String[] arr = "2 + 3 * 4 / 2".split(" ");
+		Expression expression = ExpressionBuilder.makeExpression(" 2 + 3 * 4 / 2  ");
+		assertThat(expression).isNotNull();
 
-		int result = ExpressionCalculator.calculate(arr);
-
+		int result = ExpressionCalculator.calculate(expression);
 		assertThat(result).isEqualTo(10);
 	}
 }
