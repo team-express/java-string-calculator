@@ -1,10 +1,10 @@
-package calculator;
+package expression;
 
-public class StringCalculator {
+public class ExpressionCalculator {
 	private static final int FIRST_NUMBER = 0;
 	private static final int NEXT_NUMBER = 2;
 
-	private StringCalculator() {
+	private ExpressionCalculator() {
 	}
 
 	private static int calculateOneWithOperator(int num1, int num2, String operator) {
