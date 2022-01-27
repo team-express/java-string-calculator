@@ -1,7 +1,5 @@
 package expression;
 
-import checker.ValidStringExpressionChecker;
-
 public class ExpressionBuilder {
 
 	private static final int FIRST_INDEX = 0;

@@ -1,4 +1,4 @@
-package checker;
+package expression;
 
 import java.util.Arrays;
 
