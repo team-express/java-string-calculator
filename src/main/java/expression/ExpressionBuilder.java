@@ -30,12 +30,11 @@ public class ExpressionBuilder {
 
 		Object[] splitExpression = new Object[length];
 
-		for (int i = FIRST_INDEX; i < length; i += CARRY) {
-			splitExpression[i] = Integer.parseInt(splitStringExpression[i]);
-		}
+		splitExpression[FIRST_INDEX] = splitStringExpression[FIRST_INDEX];
 
-		for (int i = FIRST_INDEX + NEXT; i < length; i += CARRY) {
-			splitExpression[i] = splitStringExpression[i];
+		for (int index = FIRST_INDEX + NEXT; index < length; index += CARRY) {
+			splitExpression[index] = splitStringExpression[index];
+			splitExpression[index + NEXT] = splitStringExpression[index + NEXT];
 		}
 
 		return splitExpression;
