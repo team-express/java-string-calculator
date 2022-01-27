@@ -5,8 +5,8 @@ import java.util.Arrays;
 public class ValidStringExpressionChecker {
 
 	private static final int FIRST_INDEX = 0;
-	private static final int FIRST_INDEX_FOR_OPERATOR = 1;
-	private static final int CARRY = 2;
+	private static final int NEXT = 1;//숫자의 다음은 항상 연산자, 연산자의 다음도 항상 숫자
+	private static final int CARRY = 2;//올림수(연산자~다음연산자, 숫자~다음숫자)
 
 	private ValidStringExpressionChecker() {
 	}
@@ -41,15 +41,16 @@ public class ValidStringExpressionChecker {
 
 	public static boolean check(String[] splitStringExpression) {
 
-		//나중에 시간을 들여서 사용자가 이상하게 입력했을때를 대비해보자!
-
 		int length = splitStringExpression.length;
 
 		if (isEvenNumber(length))
 			return false;
 
-		int index = FIRST_INDEX_FOR_OPERATOR;
-		for (; index < length && isAllNumber(splitStringExpression[index + 1]) && isOneOperator(
+		if (!isAllNumber(splitStringExpression[FIRST_INDEX]))
+			return false;
+
+		int index = FIRST_INDEX + NEXT;
+		for (; index < length && isAllNumber(splitStringExpression[index + NEXT]) && isOneOperator(
 			splitStringExpression[index]); index += CARRY)
 			;
 
