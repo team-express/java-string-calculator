@@ -17,10 +17,16 @@ public class ExpressionBuilder {
 	}
 
 	private static Object[] getSplitExpression(String[] splitStringExpression){
-		Object[] splitExpression = splitStringExpression;
+		int length = splitStringExpression.length;
 
-		for(int i=0;i<splitExpression.length;i+=2){
-			splitExpression[i] = Integer.parseInt(splitStringExpression[i]);
+		Object[] splitExpression = new Object[length];
+
+		for(int i=0;i<length;i+=2){
+			splitExpression[i] = (Integer.parseInt(splitStringExpression[i]));
+		}
+
+		for(int i=1;i<length;i+=2){
+			splitExpression[i] = splitStringExpression[i];
 		}
 
 		return splitExpression;
