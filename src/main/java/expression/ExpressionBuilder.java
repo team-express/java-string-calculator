@@ -28,11 +28,11 @@ public class ExpressionBuilder {
 
 		Object[] splitExpression = new Object[length];
 
-		splitExpression[FIRST_INDEX] = splitStringExpression[FIRST_INDEX];
+		splitExpression[FIRST_INDEX] = Integer.parseInt(splitStringExpression[FIRST_INDEX]);
 
 		for (int index = FIRST_INDEX + NEXT; index < length; index += CARRY) {
 			splitExpression[index] = splitStringExpression[index];
-			splitExpression[index + NEXT] = splitStringExpression[index + NEXT];
+			splitExpression[index + NEXT] = Integer.parseInt(splitStringExpression[index + NEXT]);
 		}
 
 		return splitExpression;
