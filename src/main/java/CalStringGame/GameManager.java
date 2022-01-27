@@ -5,6 +5,8 @@ import expression.ExpressionBuilder;
 import expression.ExpressionCalculator;
 
 public class GameManager {
+	private static final String TO_STRING = "";
+
 	private String stringExpression;
 	private String result;
 
@@ -25,7 +27,7 @@ public class GameManager {
 		Expression expression = ExpressionBuilder.makeExpression(stringExpression);
 
 		if (!(expression == null))
-			this.result = ExpressionCalculator.calculate(expression) + "";
+			this.result = ExpressionCalculator.calculate(expression) + TO_STRING;
 	}
 
 	public String getResult() {
