@@ -9,6 +9,10 @@ public class Expression {
 		this.expression = expression;
 	}
 
+	Object[] getExpression(){
+		return this.expression;
+	}
+
 	@Override
 	public String toString() {
 		return "Expression{" +
