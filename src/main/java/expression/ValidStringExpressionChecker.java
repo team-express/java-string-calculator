@@ -39,7 +39,7 @@ public class ValidStringExpressionChecker {
 		return number % 2 == 0;
 	}
 
-	public static boolean check(String[] splitStringExpression) {
+	static boolean check(String[] splitStringExpression) {//package
 
 		int length = splitStringExpression.length;
 
