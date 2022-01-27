@@ -4,6 +4,10 @@ import checker.ValidStringExpressionChecker;
 
 public class ExpressionBuilder {
 
+	private static final int FIRST_INDEX = 0;
+	private static final int NEXT = 1;
+	private static final int CARRY = 2;
+
 	private ExpressionBuilder() {
 
 	}
@@ -13,7 +17,7 @@ public class ExpressionBuilder {
 
 		String[] splitStringExpression = stringExpression.trim().split(" ");
 
-		if (ValidStringExpressionChecker.check(splitStringExpression)) {//ValidStringExpressionChecker 수정요망
+		if (ValidStringExpressionChecker.check(splitStringExpression)) {
 			Object[] splitExpression = getSplitExpression(splitStringExpression);
 			expression = new Expression(splitExpression);
 		}
@@ -26,11 +30,11 @@ public class ExpressionBuilder {
 
 		Object[] splitExpression = new Object[length];
 
-		for (int i = 0; i < length; i += 2) {
-			splitExpression[i] = (Integer.parseInt(splitStringExpression[i]));
+		for (int i = FIRST_INDEX; i < length; i += CARRY) {
+			splitExpression[i] = Integer.parseInt(splitStringExpression[i]);
 		}
 
-		for (int i = 1; i < length; i += 2) {
+		for (int i = FIRST_INDEX + NEXT; i < length; i += CARRY) {
 			splitExpression[i] = splitStringExpression[i];
 		}
 
