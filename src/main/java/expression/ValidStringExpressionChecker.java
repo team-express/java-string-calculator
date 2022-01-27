@@ -1,7 +1,5 @@
 package expression;
 
-import java.util.Arrays;
-
 public class ValidStringExpressionChecker {
 
 	private static final int FIRST_INDEX = 0;

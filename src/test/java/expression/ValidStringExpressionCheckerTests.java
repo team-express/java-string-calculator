@@ -6,8 +6,6 @@ import org.junit.jupiter.params.provider.CsvSource;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-import expression.ValidStringExpressionChecker;
-
 public class ValidStringExpressionCheckerTests {
 
 	//차후 0이먼저 나오는 숫자들도 처리할 것
