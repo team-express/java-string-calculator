@@ -9,7 +9,7 @@ public class Expression {
 		this.expression = expression;
 	}
 
-	Object[] getExpression(){
+	Object[] getExpression() {
 		return this.expression;
 	}
 
