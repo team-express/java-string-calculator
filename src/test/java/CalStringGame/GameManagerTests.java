@@ -20,7 +20,7 @@ public class GameManagerTests {
 	@DisplayName("")
 	void test() {
 		manager.play();
-		assertThat(manager.getResult()).isEqualTo(10);
+		assertThat(manager.getResult()).isEqualTo("10");
 	}
 
 }
