@@ -32,8 +32,8 @@ public class ExpressionCalculator {
 
 		int result = (Integer)splitExpression[FIRST_INDEX];
 
-		for (int i = FIRST_INDEX+NEXT; i < splitExpression.length; i += CARRY) {
-			int nextNumber = (Integer)splitExpression[i+NEXT];
+		for (int i = FIRST_INDEX + NEXT; i < splitExpression.length; i += CARRY) {
+			int nextNumber = (Integer)splitExpression[i + NEXT];
 			String operator = (String)splitExpression[i];
 
 			result = calculateOneWithOperator(result, nextNumber, operator);
