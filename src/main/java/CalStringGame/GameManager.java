@@ -24,7 +24,8 @@ public class GameManager {
 
 		Expression expression = ExpressionBuilder.makeExpression(stringExpression);
 
-		this.result = ExpressionCalculator.calculate(expression) + "";
+		if (!(expression == null))
+			this.result = ExpressionCalculator.calculate(expression) + "";
 	}
 
 	public String getResult() {
