@@ -42,7 +42,7 @@ ex) git checkout -b apply-feedback
   - [X] 방정식의 연산 결과를 반환한다.
 
 - 방정식 팩토리(EquationFactory)
-  - [ ] 문자열을 방정식으로 변환한다.
+  - [X] 문자열을 방정식으로 변환한다.
 
 - 문자열 계산기(StringCalculator)
   - [ ] 문자열 방정식의 연산 결과를 반환한다.
