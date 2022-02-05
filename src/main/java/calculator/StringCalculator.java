@@ -4,7 +4,7 @@ public class StringCalculator {
 
     private final EquationFactory equationFactory;
 
-    public StringCalculator(EquationFactory equationFactory) {
+    public StringCalculator(BasicEquationFactory equationFactory) {
         this.equationFactory = equationFactory;
     }
 

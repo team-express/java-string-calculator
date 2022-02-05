@@ -13,7 +13,7 @@ public class StringCalculatorTest {
 
     @BeforeEach
     void prepareCalculator() {
-        stringCalculator = new StringCalculator(new EquationFactory());
+        stringCalculator = new StringCalculator(new BasicEquationFactory());
     }
 
     @Nested

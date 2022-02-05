@@ -8,14 +8,14 @@ import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
 @DisplayName("EquationFactory 클래스")
-public class EquationFactoryTest {
+public class BasicEquationFactoryTest {
 
     @Nested
     @DisplayName("create 메소드는")
     class Describe_constructor {
 
         private Equation subject(String equation) {
-            return new EquationFactory().create(equation);
+            return new BasicEquationFactory().create(equation);
         }
 
         @Nested
