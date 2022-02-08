@@ -1,4 +1,4 @@
-package CalStringGame;
+package calstringgame;
 
 import expression.Expression;
 import expression.ExpressionBuilder;

@@ -1,4 +1,4 @@
-package CalStringGame;
+package calstringgame;
 
 import java.util.Scanner;
 
