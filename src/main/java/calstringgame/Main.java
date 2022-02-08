@@ -15,7 +15,11 @@ public class Main {
 	}
 
 	private static void start(InputView inputView, OutputView outputView) {
-		outputView.print(play(inputView.read()));
+		String stringExpression = inputView.read();
+
+		String result = play(stringExpression);
+
+		outputView.print(result);
 	}
 
 	private static String play(String stringExpression) {
