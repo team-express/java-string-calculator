@@ -7,32 +7,20 @@ import expression.ExpressionCalculator;
 public class GameManager {
 	private static final String TO_STRING = "";
 
-	private String stringExpression;
-	private String result;
+	public String play(String stringExpression) {
 
-	public GameManager() {
-		this.stringExpression = null;
-		this.result = null;
-	}
-
-	public void init(String stringExpression) {
-		this.stringExpression = stringExpression;
-	}
-
-	public void play() {
+		String result = null;
 
 		if (stringExpression == null) {
-			return;
+			return result;
 		}
 
 		Expression expression = ExpressionBuilder.makeExpression(stringExpression);
 
 		if (expression != null) {
-			this.result = ExpressionCalculator.calculate(expression) + TO_STRING;
+			result = ExpressionCalculator.calculate(expression) + TO_STRING;
 		}
-	}
 
-	public String getResult() {
-		return this.result;
+		return result;
 	}
 }

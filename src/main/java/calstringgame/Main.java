@@ -13,8 +13,6 @@ public class Main {
 	}
 
 	private static void start(InputView inputView, OutputView outputView, GameManager manager) {
-		manager.init(inputView.read());
-		manager.play();
-		outputView.print(manager.getResult());
+		outputView.print(manager.play(inputView.read()));
 	}
 }
