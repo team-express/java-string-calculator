@@ -9,6 +9,6 @@ public class CalculateTypeTest {
 	@Test
 	void test() {
 		CalculateType c = CalculateType.of("+");
-		System.out.println(c.calculate(1,2));
+		System.out.println(c.calculate(1, 2));
 	}
 }

@@ -18,11 +18,11 @@ public enum CalculateType {
 		this.expression = expression;
 	}
 
-	public int calculate(int num1, int num2){
-		return expression.apply(num1,num2);
+	public int calculate(int num1, int num2) {
+		return expression.apply(num1, num2);
 	}
 
-	static CalculateType of(String operator){
+	static CalculateType of(String operator) {
 		return Arrays.stream(values())
 			.filter(v -> v.operator.equals(operator))
 			.findFirst()
