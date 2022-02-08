@@ -25,8 +25,9 @@ public class ValidStringExpressionChecker {
 
 	private static boolean isOneOperator(String s) {
 
-		if (s.length() != 1)
+		if (s.length() != 1) {
 			return false;
+		}
 
 		char c = s.charAt(FIRST_INDEX);
 
@@ -41,11 +42,13 @@ public class ValidStringExpressionChecker {
 
 		int length = splitStringExpression.length;
 
-		if (isEvenNumber(length))
+		if (isEvenNumber(length)) {
 			return false;
+		}
 
-		if (!isAllNumber(splitStringExpression[FIRST_INDEX]))
+		if (!isAllNumber(splitStringExpression[FIRST_INDEX])) {
 			return false;
+		}
 
 		int index = FIRST_INDEX + NEXT;
 		for (; index < length && isAllNumber(splitStringExpression[index + NEXT]) && isOneOperator(

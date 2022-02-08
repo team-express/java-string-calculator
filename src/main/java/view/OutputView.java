@@ -6,8 +6,9 @@ public class OutputView {
 	public void print(String result) {
 		String message = result;
 
-		if (message == null)
+		if (message == null) {
 			message = ERROR_MESSAGE;
+		}
 
 		System.out.println(message);
 	}

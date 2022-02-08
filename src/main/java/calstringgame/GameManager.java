@@ -21,13 +21,15 @@ public class GameManager {
 
 	public void play() {
 
-		if (stringExpression == null)
+		if (stringExpression == null) {
 			return;
+		}
 
 		Expression expression = ExpressionBuilder.makeExpression(stringExpression);
 
-		if (!(expression == null))
+		if (!(expression == null)) {
 			this.result = ExpressionCalculator.calculate(expression) + TO_STRING;
+		}
 	}
 
 	public String getResult() {
