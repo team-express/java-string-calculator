@@ -7,7 +7,6 @@ public class ExpressionBuilder {
 	private static final int CARRY = 2;
 
 	private ExpressionBuilder() {
-
 	}
 
 	public static Expression makeExpression(String stringExpression) {
