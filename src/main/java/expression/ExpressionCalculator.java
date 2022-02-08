@@ -9,24 +9,7 @@ public class ExpressionCalculator {
 	}
 
 	private static int calculateOneWithOperator(int num1, int num2, String operator) {
-
-		if (operator.equals("+")) {
-			num1 += num2;
-		}
-
-		if (operator.equals("-")) {
-			num1 -= num2;
-		}
-		if (operator.equals("*")) {
-			num1 *= num2;
-		}
-
-		//차후 0으로 나누는 것 처리할 것
-		if (operator.equals("/")) {
-			num1 /= num2;
-		}
-
-		return num1;
+		return CalculateType.of(operator).calculate(num1, num2);
 	}
 
 	public static int calculate(Expression expression) {
