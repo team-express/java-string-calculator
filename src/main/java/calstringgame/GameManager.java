@@ -11,10 +11,6 @@ public class GameManager {
 
 		String result = null;
 
-		if (stringExpression == null) {
-			return result;
-		}
-
 		Expression expression = ExpressionBuilder.makeExpression(stringExpression);
 
 		if (expression != null) {
