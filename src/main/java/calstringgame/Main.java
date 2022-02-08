@@ -1,14 +1,11 @@
 package calstringgame;
 
-import java.util.Scanner;
-
 import view.InputView;
 import view.OutputView;
 
 public class Main {
 	public static void main(String[] args) {
-		Scanner scanner = new Scanner(System.in);
-		InputView inputView = new InputView(scanner);
+		InputView inputView = new InputView();
 		OutputView outputView = new OutputView();
 		GameManager manager = new GameManager();
 
