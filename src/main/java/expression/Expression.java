@@ -12,6 +12,14 @@ public class Expression {
 		this.operators = operators;
 	}
 
+	public List<Integer> getNumbers() {
+		return numbers;
+	}
+
+	public List<String> getOperators() {
+		return operators;
+	}
+
 	@Override
 	public String toString() {
 		return "Expression{" +
