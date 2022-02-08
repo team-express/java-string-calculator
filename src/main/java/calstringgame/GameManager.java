@@ -27,7 +27,7 @@ public class GameManager {
 
 		Expression expression = ExpressionBuilder.makeExpression(stringExpression);
 
-		if (!(expression == null)) {
+		if (expression != null) {
 			this.result = ExpressionCalculator.calculate(expression) + TO_STRING;
 		}
 	}
