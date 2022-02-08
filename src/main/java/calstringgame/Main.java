@@ -1,5 +1,8 @@
 package calstringgame;
 
+import expression.Expression;
+import expression.ExpressionBuilder;
+import expression.ExpressionCalculator;
 import view.InputView;
 import view.OutputView;
 
@@ -7,12 +10,23 @@ public class Main {
 	public static void main(String[] args) {
 		InputView inputView = new InputView();
 		OutputView outputView = new OutputView();
-		GameManager manager = new GameManager();
 
-		start(inputView, outputView, manager);
+		start(inputView, outputView);
 	}
 
-	private static void start(InputView inputView, OutputView outputView, GameManager manager) {
-		outputView.print(manager.play(inputView.read()));
+	private static void start(InputView inputView, OutputView outputView) {
+		outputView.print(play(inputView.read()));
+	}
+
+	private static String play(String stringExpression) {
+		String result = null;
+
+		Expression expression = ExpressionBuilder.makeExpression(stringExpression);
+
+		if (expression != null) {
+			result = ExpressionCalculator.calculate(expression) + "";
+		}
+
+		return result;
 	}
 }
