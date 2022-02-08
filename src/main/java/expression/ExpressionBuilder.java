@@ -1,5 +1,8 @@
 package expression;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class ExpressionBuilder {
 
 	private static final int FIRST_INDEX = 0;
@@ -15,25 +18,32 @@ public class ExpressionBuilder {
 		String[] splitStringExpression = stringExpression.trim().split(" ");
 
 		if (ValidStringExpressionChecker.check(splitStringExpression)) {
-			Object[] splitExpression = getSplitExpression(splitStringExpression);
-			expression = new Expression(splitExpression);
+			List<Integer> numbers = getNumbers(splitStringExpression);
+			List<String> operators = getOperators(splitStringExpression);
+
+			expression = new Expression(numbers, operators);
 		}
 
 		return expression;
 	}
 
-	private static Object[] getSplitExpression(String[] splitStringExpression) {
-		int length = splitStringExpression.length;
+	private static List<Integer> getNumbers(String[] splitStringExpression) {
+		List<Integer> numbers = new ArrayList<>();
 
-		Object[] splitExpression = new Object[length];
-
-		splitExpression[FIRST_INDEX] = Integer.parseInt(splitStringExpression[FIRST_INDEX]);
-
-		for (int index = FIRST_INDEX + NEXT; index < length; index += CARRY) {
-			splitExpression[index] = splitStringExpression[index];
-			splitExpression[index + NEXT] = Integer.parseInt(splitStringExpression[index + NEXT]);
+		for (int index = FIRST_INDEX; index < splitStringExpression.length; index += CARRY) {
+			numbers.add(Integer.parseInt(splitStringExpression[index]));
 		}
 
-		return splitExpression;
+		return numbers;
+	}
+
+	private static List<String> getOperators(String[] splitStringExpression) {
+		List<String> operators = new ArrayList<>();
+
+		for (int index = FIRST_INDEX + NEXT; index < splitStringExpression.length; index += CARRY) {
+			operators.add(splitStringExpression[index]);
+		}
+
+		return operators;
 	}
 }

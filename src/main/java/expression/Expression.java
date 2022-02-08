@@ -1,22 +1,22 @@
 package expression;
 
 import java.util.Arrays;
+import java.util.List;
 
 public class Expression {
-	private Object[] expression;
+	private List<Integer> numbers;
+	private List<String> operators;
 
-	Expression(Object[] expression) {//package
-		this.expression = expression;
-	}
-
-	Object[] getExpression() {
-		return this.expression;
+	Expression(List<Integer> numbers, List<String> operators) {
+		this.numbers = numbers;
+		this.operators = operators;
 	}
 
 	@Override
 	public String toString() {
 		return "Expression{" +
-			"expression=" + Arrays.toString(expression) +
+			"numbers=" + numbers +
+			", operators=" + operators +
 			'}';
 	}
 }
