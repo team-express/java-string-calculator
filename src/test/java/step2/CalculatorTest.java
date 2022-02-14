@@ -46,7 +46,7 @@ class CalculatorTest {
             @DisplayName("It: 예외가 발생한다")
             void it_throws_exception() {
                 assertThrows(IllegalArgumentException.class, () -> {
-                   subject(Collections.singletonList(1), Collections.singletonList(Operator.SUM));
+                    subject(Collections.singletonList(1), Collections.singletonList(Operator.SUM));
                 });
             }
         }

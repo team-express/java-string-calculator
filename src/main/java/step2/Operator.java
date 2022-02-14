@@ -23,7 +23,7 @@ public enum Operator {
 
     // enum 객체가 가지고 있는 BiFunction 인터페이스 구현 로직에 따라 계산 결과를 반환한다.
     public int calculate(int a, int b) {
-        return this.biFunction.apply(a,b);
+        return this.biFunction.apply(a, b);
     }
 
     // 문자 형태의 연산자를 operatorSymbol로 가지고 있는 enum 객체를 찾아 반환한다.
@@ -33,5 +33,5 @@ public enum Operator {
                 .findFirst() // enum 객체를 찾으면 반환한다.
                 .orElseThrow(IllegalArgumentException::new); // 일치하는 객체가 없다면 예외 발생
     }
-
 }
+

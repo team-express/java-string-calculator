@@ -28,6 +28,7 @@ public class StringCalculatePreparator implements CalculatePreparator {
                 .map(Integer::valueOf) // 문자를 숫자로 변환한 stream을 반환
                 .collect(Collectors.toList()); // 변환된 숫자들을 List로 모은다
     }
+
     // 문자열의 홀수 위치 문자를 이용해 연산자 List를 만드는 메서드
     private List<Operator> createOperators(List<String> strings) {
         List<String> oddPositions = new ArrayList<>(); // 홀수 문자열을 담을 List
@@ -39,3 +40,4 @@ public class StringCalculatePreparator implements CalculatePreparator {
                 .collect(Collectors.toList()); // 반환되는 enum 객체를 List로 담는다
     }
 }
+
