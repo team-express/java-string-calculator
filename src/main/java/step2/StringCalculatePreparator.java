@@ -5,7 +5,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class PrepareCalculationContents {
+public class StringCalculatePreparator implements CalculatePreparator {
     private static final String SEPARATOR = " "; // 문자열 분리의 기준이 되는 상수(공백)
     private static final int INTERVAL = 2; // 문자 배열에서 숫자와 연산자의 위치가 구분되는 인덱스 간격
 

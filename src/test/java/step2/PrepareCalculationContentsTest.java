@@ -17,7 +17,7 @@ class PrepareCalculationContentsTest {
         // subject를 이용해 테스트 대상이 되는 메서드를 분리한다.
         // create()는 문자열 식을 숫자와 연산자로 가공하고, 전체 계산을 담당하는 Calculator 객체를 반환한다.
         private Calculator subject(String stringExpression) {
-            return new PrepareCalculationContents().create(stringExpression);
+            return new StringCalculatePreparator().create(stringExpression);
         }
 
         @Nested // 테스트 클래스의 하위 구조로 선언한다
