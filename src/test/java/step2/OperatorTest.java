@@ -14,7 +14,7 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 // Describe : 테스트 대상을 명사로 작성
 // Context : ~인 경우, ~ 할 때, 만약 ~ 한다면과 같이 상황 또는 조건을 기술한다
 // It : 위에서 명사로 작성한 테스트 대상의 행동을 ~이다, ~한다, ~를 갖는다 등으로 작성한다
-@DisplayName(" Operator 클래스 동작 시나리오 테스트")
+@DisplayName("Operator 클래스 동작 시나리오 테스트")
 class OperatorTest {
 
     @Nested // 테스트 클래스의 하위 구조로 선언한다
